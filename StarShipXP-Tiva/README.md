@@ -4,88 +4,114 @@
 
 ###Onboard RGB LED
 
-1. LED Red    	PF_1
-2. LED Blue 	PF_2
-3. LED Green	PF_3
+|Function   |Pin |Remarks |
+|-----------|----|--------|
+|LED Red    |PF_1|T0CCP1  |
+|LED Blue 	|PF_2|T1CCP0  |
+|LED Green  |PF_3|T1CCP1  |
 
 ###Onboard User Switch
 
-4. Switch 1		PF_0
-5. Switch 2		PF_4
+|Function   |Pin |Remarks |
+|-----------|----|--------|
+|Switch 1   |PF_0|NMI     |
+|Switch 2 	|PF_4|        |
 
 ###Virtual Serial Port
 
-####UART Module 0
-6. UART RX		PA_0
-7. UART TX		PA_1
+|Function   |Pin |Remarks |
+|-----------|----|--------|
+|UART RX    |PA_0|U0      |
+|UART TX    |PA_1|        |
 
 ##StarShipXP Peripherals
 
 ###RGB LED
 
-1. LED Red			PB_3 (T3C1)
-2. LED Green		PC_4 (WT0C0)
-3. LED Blue 		PC_5 (WT0C1)
+|Function   |Pin |Remarks |
+|-----------|----|--------|
+|LED Red    |PB_3|T3CCP1  |
+|LED Green  |PC_4|WT0CCP0 |
+|LED Blue 	|PC_5|WT0CCP1 |
 
 ###Sensors
 
-4. LDR/NTC 		PE_5 (AIN 8)
-5. POT   		PB_5 (AIN 11)
-6. NAVI KEYS	PE_1 (AIN 2)
-7. MICROPHONE	PE_2 (AIN 1)
-8. DHT11 		PB_2
+|Function   |Pin |Remarks |
+|-----------|----|--------|
+|LDR/NTC    |PE_5|AIN 8   |
+|POT        |PB_5|AIN 11  |
+|NAVI KEYS  |PE_1|AIN 2   |
+|MICROPHONE |PE_2|AIN 1   |
+|DHT11      |PB_2|Digital |
+|LM75       |I2C |0x48    |
+|PCF8583    |I2C |0x51    |
 
 ###16x2 Character LCD
 
-9. LCD D4 			PE_4
-10. LCD D5 			PA_5
-11. LCD D6 			PE_3
-12. LCD D7 			PC_6
-13. LCD EN 			PE_0
-14. LCD RS 			PF_1
+|Function   |Pin |Remarks |
+|-----------|----|--------|
+|LCD D4 		|PE_4|        |
+|LCD D5 		|PA_5|        |
+|LCD D6 		|PE_3|        |
+|LCD D7 		|PC_6|        |
+|LCD EN 		|PE_0|        |
+|LCD RS     |PF_1|        |
 
 ###Audio
 
-15. AUDIO IN (L)	PD_2 (AIN 5)
-16. AUDIO IN (R)	PD_3 (AIN 4)
-
-17. AUDIO OUT (L)	PF_2 (T1C0)
-18. AUDIO OUT (R)	PF_3 (TIC1)
+|Function     |Pin |Remarks |
+|-------------|----|--------|
+|AUDIO IN (L) |PD_2|AIN 5   |
+|AUDIO IN (R) |PD_3|AIN 4   |
+|             |    |        |
+|AUDIO OUT (L)|PF_2|T1CCP0  |
+|AUDIO OUT (R)|PF_3|TICCP1  |
 
 ###4x4 Matrix Keypad
 
-19. KEYPAD COL1 	PE_4
-20. KEYPAD COL2 	PA_5
-21. KEYPAD COL3 	PE_3
-22. KEYPAD COL4 	PC_6
-23. KEYPAD ROW1 	PC_7
-24. KEYPAD ROW2 	PD_6
-25. KEYPAD ROW3 	PD_7
-26. KEYPAD ROW4 	PF_4
+|Function   |Pin |Remarks |
+|-----------|----|--------|
+|KEYPAD COL1|PE_4|        |
+|KEYPAD COL2|PA_5|        |
+|KEYPAD COL3|PE_3|        |
+|KEYPAD COL4|PC_6|        |
+|           |    |        |
+|KEYPAD ROW1|PC_7|        |
+|KEYPAD ROW2|PD_6|        |
+|KEYPAD ROW3|PD_7|        |
+|KEYPAD ROW4|PF_4|        |
 
 ###Communication Interfaces
 
-####I2C Module 1
-27. I2C SCL 		PA_6
-28. I2C SDA 		PA_7
+|Function   |Pin |Remarks |
+|-----------|----|--------|
+|I2C SCL 		|PA_6|I2C1    |
+|I2C SDA 		|PA_7|        |
+|           |    |        |
+|SPI MOSI   |PB_7|SSI2    |
+|SPI MISO 	|PB_6|        |
+|SPI CLK 		|PB_4|        |
+|SPI CS_A 	|PA_3|        |
+|SPI CS_B 	|PA_2|        |
+|           |    |        |
+|UART TX 		|PB_1|U0      |
+|UART RX 		|PB_0|        |
 
-####SPI Module 2
-29. SPI MOSI 		PB_7
-30. SPI MISO 		PB_6
-31. SPI CLK 		PB_4
-32. SPI CS_A 		PA_3
-33. SPI CS_B 		PA_2
+####SPI Chip Select
 
-####UART Module 1
-34. UART TX 		PB_1
-35. UART RX 		PB_0
+|CS_A |CS_B |Device         |
+|:---:|:---:|---------------|
+|0    |0    |Shift Register |
+|0    |1    |SD Card        |
+|1    |0    |Graphics LCD   |
+|1    |1    |External       |
 
 ###Miscellaneous
 
-36. BUZZER 			PF_2
-
-37. GLCD RESET	PB_6
-38. GLCD D/C 		PA_4
-
-39. BT/WIFI/RTC INT	PF_0
+|Function   |Pin |Remarks |
+|-----------|----|--------|
+|Buzzer     |PF_2|T1CCP0  |
+|GLCD Reset |PB_6|        |
+|GLCD D/C   |PA_4|        |
+|BT/WiFi/INT|PF_0|        |
 
