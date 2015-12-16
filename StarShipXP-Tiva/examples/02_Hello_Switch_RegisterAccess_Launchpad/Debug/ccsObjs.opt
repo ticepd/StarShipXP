@@ -1,1 +1,0 @@
-"./main.obj" "./tm4c123gh6pm_startup_ccs.obj" "../tm4c123gh6pm.cmd" -l"libc.a" -l"G:\Controllers\TIVA\TivaWare_C_Series-2.1.1.71\driverlib\ccs\Debug\driverlib.lib" 
