@@ -4,7 +4,7 @@
 
 ###Onboard RGB LED
 
-1. LED Red    PF_1
+1. LED Red    	PF_1
 2. LED Blue 	PF_2
 3. LED Green	PF_3
 
@@ -13,22 +13,27 @@
 4. Switch 1		PF_0
 5. Switch 2		PF_4
 
+###Virtual Serial Port
+
+####UART Module 0
+6. UART RX		PA_0
+7. UART TX		PA_1
 
 ##StarShipXP Peripherals
 
 ###RGB LED
 
-1. LED Red			PB_3
-2. LED Green		PC_4
-3. LED Blue 		PC_5
+1. LED Red			PB_3 (T3C1)
+2. LED Green		PC_4 (WT0C0)
+3. LED Blue 		PC_5 (WT0C1)
 
 ###Sensors
 
 4. LDR/NTC 		PE_5 (AIN 8)
-5. POT   			PB_5 (AIN 11)
+5. POT   		PB_5 (AIN 11)
 6. NAVI KEYS	PE_1 (AIN 2)
 7. MICROPHONE	PE_2 (AIN 1)
-8. DHT11 			PB_2
+8. DHT11 		PB_2
 
 ###16x2 Character LCD
 
@@ -41,11 +46,11 @@
 
 ###Audio
 
-15. AUDIO IN (L)	PD_2  (AIN 5)
-16. AUDIO IN (R)	PD_3  (AIN 4)
+15. AUDIO IN (L)	PD_2 (AIN 5)
+16. AUDIO IN (R)	PD_3 (AIN 4)
 
-17. AUDIO OUT (L)	PF_2
-18. AUDIO OUT (R) PF_3
+17. AUDIO OUT (L)	PF_2 (T1C0)
+18. AUDIO OUT (R)	PF_3 (TIC1)
 
 ###4x4 Matrix Keypad
 
@@ -60,16 +65,18 @@
 
 ###Communication Interfaces
 
+####I2C Module 1
 27. I2C SCL 		PA_6
 28. I2C SDA 		PA_7
 
-
+####SPI Module 2
 29. SPI MOSI 		PB_7
 30. SPI MISO 		PB_6
 31. SPI CLK 		PB_4
 32. SPI CS_A 		PA_3
 33. SPI CS_B 		PA_2
 
+####UART Module 1
 34. UART TX 		PB_1
 35. UART RX 		PB_0
 
