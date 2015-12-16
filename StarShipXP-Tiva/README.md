@@ -4,9 +4,9 @@
 
 ###Onboard RGB LED
 
-|LED Red  | PF_1|
-|LED Blue |	PF_2|
-|LED Green|	PF_3|
+1. LED Red  PF_1
+2. LED Blue 	PF_2
+2. LED Green	PF_3
 
 ###Onboard User Switch
 
