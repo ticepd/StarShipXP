@@ -22,7 +22,7 @@ LiquidCrystal lcd(RS, EN, D4, D5, D6, D7);
 
 DHT dht(DHTPIN, DHTTYPE);
 
-unsigned int currentValue=120, previousValue=120, timeBase = 1;
+unsigned int currentValue, previousValue=120, timeBase = 0;
 
 void setup() {
   Serial.begin(9600);
@@ -39,7 +39,7 @@ void setup() {
 }
 
 void loop() {
-  delay(100);
+  delay(10);
 
   float h = dht.readHumidity();
   float t = dht.readTemperature();
@@ -64,13 +64,14 @@ void loop() {
  
   int potValue = analogRead(POT);
   currentValue = 235-(potValue/18); 
-  Tft.drawLine(timeBase-1, previousValue, timeBase, currentValue, WHITE);
+  Tft.fillRectangle(timeBase+1, 0, 3, 240, BLACK);
+  Tft.drawLine(timeBase, previousValue, timeBase+1, currentValue, WHITE);
   previousValue = currentValue;
   timeBase = timeBase+1;
   
-  if(timeBase > 300)
+  if(timeBase > 315)
   {
-    timeBase = 1;
-    Tft.TFTinit();
+    timeBase = 0;
+    Tft.fillRectangle(0, 0, 3, 240, BLACK);
   }
 }
